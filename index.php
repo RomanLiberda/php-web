@@ -38,6 +38,11 @@
     </div>
 </div>
 
+<?php
+echo 'Hello world';
+echo 'Test';
+?>
+
 
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="js/main.js"></script>
