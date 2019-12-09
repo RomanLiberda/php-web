@@ -1,0 +1,152 @@
+/* app css stylesheet */
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.top-panel {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 100ms ease-in;
+    padding: 1em;
+    box-sizing: border-box;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.top-panel.opened {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.top-panel > .mobile-control {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.top-panel > .mobile-control > .menu-toggle {
+    position: relative;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.top-panel > .mobile-control > .menu-toggle > .menu-icon-line {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border-radius: 1em;
+    transition: all 100ms ease-in;
+}
+
+.top-panel > .mobile-control > .menu-toggle > .menu-icon-line:first-of-type {
+    margin-top: -30%;
+}
+
+.top-panel > .mobile-control > .menu-toggle > .menu-icon-line:last-of-type {
+    margin-top: 30%;
+}
+
+.top-panel > .mobile-control > .menu-toggle.opened > .menu-icon-line:first-of-type {
+
+    transform: rotate(45deg);
+    margin-top: 0;
+
+
+}
+
+.top-panel > .mobile-control > .menu-toggle.opened > .menu-icon-line:nth-of-type(2) {
+    opacity: 0;
+    transform: translateX(1em);
+
+}
+
+.top-panel > .mobile-control > .menu-toggle.opened > .menu-icon-line:last-of-type {
+
+    transform: rotate(-45deg);
+    margin-top: 0;
+
+}
+
+.top-panel > nav {
+    margin-top: 1em;
+}
+
+.top-panel > nav > a {
+    position: relative;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: .7em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-panel > nav.mobile > a {
+    opacity: 0;
+    transform: translateX(-2em);
+    transition: all 100ms ease-in;
+}
+
+.top-panel > nav.mobile > a.opened {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.top-panel > nav > a:hover:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.top-panel > nav > a:last-of-type {
+    border-bottom: 0;
+}
+
+
+.introduction {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: grey;
+}
+
+.introduction > .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.introduction > .intro-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.introduction > .intro-content > .title {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
