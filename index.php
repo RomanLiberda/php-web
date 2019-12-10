@@ -1,3 +1,11 @@
+<?php
+
+mb_internal_encoding("UTF-8");
+
+require_once('autoloader.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -37,11 +45,6 @@
         <div>...my first cms...</div>
     </div>
 </div>
-
-<?php
-echo 'Hello world';
-echo 'Test';
-?>
 
 
 <script src="node_modules/jquery/dist/jquery.js"></script>
